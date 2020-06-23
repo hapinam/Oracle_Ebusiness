@@ -1,0 +1,1 @@
+select RELEASE_NAME from applsys.FND_PRODUCT_GROUPS;

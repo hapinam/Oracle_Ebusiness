@@ -1,0 +1,2 @@
+select decode(wfo.state, 0, '0 = Ready', 1, '1 = Delayed', 2, '2 = Processed', 3, '3 = Exception', to_char(substr(wfo.state,1,12))) State, count(*) COUNT
+from APPLSYS.WF_NOTIFICATION_OUT WFO group by wfo.state;
